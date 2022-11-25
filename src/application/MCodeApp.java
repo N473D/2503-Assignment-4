@@ -33,7 +33,7 @@ public class MCodeApp
                     case 'E':
                             System.out.println ("Enter the message you'd like to encode into Morse Code");
                             message = in.nextLine();
-                            //System.out.println (encoder.encodeMessage(message));
+                            System.out.println (encoder.encodeMessage(message));
                     default:   
                 }
 //            }
