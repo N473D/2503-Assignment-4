@@ -89,7 +89,6 @@ public class BinaryTree<T>
 
         BinaryTree<T> result = new BinaryTree<T>();
         result.root = root.getLeft();
-
         return result;
     }
 
@@ -122,7 +121,6 @@ public class BinaryTree<T>
 
         BinaryTree<T> result = new BinaryTree<T>();
         result.root = root.getRight();
-
         return result;
     }
 
@@ -137,7 +135,6 @@ public class BinaryTree<T>
         if (root == null)
             throw new RuntimeException ("Get left operation "
                 + "failed. The tree is empty.");
-
         root.setRight(newRight.root);
     }
 
@@ -149,10 +146,8 @@ public class BinaryTree<T>
     public int size()
     {
         int result = 0;
-
         if (root != null)
             result = root.count();
-
         return result;
     }
     
@@ -186,10 +181,8 @@ public class BinaryTree<T>
     private Iterator<T> inorder()
     {
         ArrayIterator<T> iter = new ArrayIterator<T>();
-
         if (root != null)
             root.inorder (iter);
-
         return iter;
     }
 
@@ -334,7 +327,6 @@ public class BinaryTree<T>
         public BTNode<T> find (T target)
         {
             BTNode<T> result = null;
-
             if (element.equals(target))
                 result = this;
             else
@@ -344,7 +336,6 @@ public class BinaryTree<T>
                 if (result == null && right != null)
                     result = right.find(target);
             }
-
             return result;
         }
 
@@ -354,13 +345,11 @@ public class BinaryTree<T>
         public int count()
         {
             int result = 1;
-
             if (left != null)
                 result += left.count();
 
             if (right != null)
                 result += right.count();
-
             return result;
         }
 
@@ -372,9 +361,7 @@ public class BinaryTree<T>
         {
             if (left != null)
                 left.inorder (iter);
-
             iter.add (element);
-
             if (right != null)
                 right.inorder (iter);
         }
@@ -429,9 +416,7 @@ public class BinaryTree<T>
         {
             if (! hasNext())
                 throw new RuntimeException ("There are no more elements available to the iterator");
-
             current++;
-
             return items.get(current - 1);
         }
 
