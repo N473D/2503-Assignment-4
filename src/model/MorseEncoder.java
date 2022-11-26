@@ -4,15 +4,30 @@ import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
 
+/**
+ * Creates the morse code array and encodes the letters
+ * @author Gabriel Avinante
+ *
+ */
 public class MorseEncoder {
 	String[] alphabet;
 
+	/**
+	 * Initializes the string array list and creates the array of morse code
+	 * @param fileName The file that contains the morse code
+	 * @throws FileNotFoundException
+	 */
 	public MorseEncoder(String fileName) throws FileNotFoundException {
 		alphabet = new String[26];
 		createArray(fileName);
 
 	}
 
+	/**
+	 * Reads the file and creates the array of morse code
+	 * @param fileName The file that contains the morse code
+	 * @throws FileNotFoundException
+	 */
 	private void createArray(String fileName) throws FileNotFoundException {
 		Scanner in = new Scanner(new File(fileName));
 		String letter;
@@ -25,14 +40,15 @@ public class MorseEncoder {
 		in.close();
 	}
 
-	public String encoder(String message) {
-		return encode(message);
-	}
-
-	public String encode(String morseCode) {
+	/**
+	 * Encodes the message inputed by the user
+	 * @param message The message from the user 
+	 * @return The morse code of the letter from the message
+	 */
+	public String encode(String message) {
 
 		String code = null;
-		switch (morseCode) {
+		switch (message) {
 		case "a":
 			code = alphabet[0];
 			break;
