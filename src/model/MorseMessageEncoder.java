@@ -4,7 +4,8 @@ import java.io.FileNotFoundException;
 /**
  * Uses the MorseEncoder class to encode the full message of the user
  * @author Gabriel Avinante
- *
+ * @version 1.0
+ * Last Modified: Nov 25, 2022, created javadoc, Gabriel Avinante
  */
 public class MorseMessageEncoder {
 	

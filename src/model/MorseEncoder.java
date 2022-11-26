@@ -7,7 +7,8 @@ import java.io.FileNotFoundException;
 /**
  * Creates the morse code array and encodes the letters
  * @author Gabriel Avinante
- *
+ * @version 1.0
+ * Last Modified: Nov 25, 2022, created javadoc, Gabriel Avinante
  */
 public class MorseEncoder {
 	String[] alphabet;
